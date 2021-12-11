@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Power Shell</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="icon" href="sql_icon/tab.png">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                 Web Tools
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">SQL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotact.html">Contact</a>
+                        </li>
+
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </head>
+
+    <body>
+
+        <div class="container-fluid p-5 bg-secondary text-white text-center">
+            <h1> Power SHELL </h1>
+            <p> Test network connectivte !</p>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/software.png" alt="" width="50" height="50" onclick="box1()" id="image2"> Update List </h3>
+                    <p>wmic qfe list</p>
+                    <p>Install-Module PSWindowsUpdate</p>
+                    <p> Get-WUHistory | Select-Object -First 20</p>
+
+
+
+                    <p id="demo"></p>
+
+                    <script>
+                        function myFunction() {
+                            document.getElementById("demo").innerHTML = "Hello World";
+                        }
+                    </script>
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/power-button.png" alt="" width="50" height="50"> shutdown Remotly </h3>
+                    <p> Stop-Computer -ComputerName "Server01", "Server02", "localhost"</p>
+
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <a href="javascript: changeText(1);"> <img src="powershell_icon/qr-code.png" alt="" width="50" height="50"> </a> Get NS </h3>
+                    <p>Get-WMIObject Win32_Bios -ComputerName 'remote-svr1' | Select-Object SerialNumber</p>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/cpu.png" alt="" width="50" height="50" onclick="box4()" id="image5"> Systeme Info </h3>
+                    <p>systemeinfo</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/hard-disk.png" alt="" width="50" height="50" onclick="box5()" id="image6">Repair Hard Disk </h3>
+                    <p>chkdsk X: /F</p>
+                    <p>change x by your hard name </p>
+                    <script>
+                        function box5() {
+                            var image2 = document.getElementById("image6");
+                            alert("INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');");
+                            image1.src = url;
+                        }
+                    </script>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/ip.png" alt="" width="50" height="50" onclick="box6()" id="image7"> Network info </h3>
+                    <p>SQL requires single quotes around text values (most database systems will also allow double quotes)</p>
+                    <script>
+                        function box6() {
+                            var image2 = document.getElementById("image7");
+                            alert("SELECT * FROM Customers WHERE Country='Mexico';");
+                            image1.src = url;
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/coding.png" alt="" width="50" height="50" onclick="box7()" id="image8"> ssh </h3>
+                    <p>ssh your_username@host_ip_address</p>
+
+
+
+                    <script>
+                        function box7() {
+                            var image1 = document.getElementById("image8");
+                            alert("CREATE TABLE Persons (Personid int NOT NULL AUTO_INCREMENT,LastName varchar(255) NOT NULL,FirstName varchar(255),Age int,PRIMARY KEY (Personid));");
+                            image1.src = url;
+                        }
+                    </script>
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/comments.png" alt="" width="50" height="50"> SMS Message </h3>
+                    <p> $wshell = New-Object -ComObject Wscript.Shell </p>
+                    <p> $Output = $wshell.Popup("The task has finished")</p>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <img src="powershell_icon/router.png" alt="" width="50" height="50" onclick="box9()" id="image10"> Wifi </h3>
+                    <p>NETSH WLAN SHOW PROFILES</p>
+                    <script>
+                        function box9() {
+                            var image1 = document.getElementById("image10");
+                            alert("SELECT MIN(Price) AS SmallestPrice FROM Products; ");
+                            image1.src = url;
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
+
+
+
+
+</body>
+
+</html>
